@@ -25,7 +25,9 @@ public class Policy
       holderHeight = 0;
       holderWeight = 0;
    }
-   
+
+// initial constructor for the class that will set all items to the input values
+
    public Policy(double polNum, String proName, String holFirst, String holLast, int holAge, String holSmoker, double holHeight, double holWeight)
    {
       policyNumber = polNum;
@@ -37,52 +39,72 @@ public class Policy
       holderHeight = holHeight;
       holderWeight = holWeight;
    }
+
+// method to set the policy number outside the class
    
    public void setPolNumber(double polNum)
    {
       policyNumber = polNum;
    }
-   
+
+// method to set the provider name outside the class
+
    public void setProName(String proName)
    {
       providerName = proName;
    }
+
+// method to set the policy holder first name outside the class
 
    public void setHolFirst(String holFirst)
    {
       holderFirstName = holFirst;
    }
 
+// method to set the policy holder last name outside the class
+
    public void setHolLast(String holLast)
    {
       holderLastName = holLast;
    }
+
+// method to set the policy holder age outside the class
 
    public void setHolAge(int holAge)
    {
       holderAge = holAge;
    }
 
+// method to set the policy holder smoking status outside the class
+
    public void setSmokerStatus(String holSmoker)
    {
       holderSmokerStatus = holSmoker;
    }
+
+// method to set the policy holder height outside the class
 
    public void setHeight(double holHeight)
    {
       holderHeight = holHeight;
    }
 
+// method to set the policy holder weight outside the class
+
    public void setWeight(double holWeight)
    {
       holderWeight = holWeight;
    }
-   
+
+// method to get the policy holder BMI outside the class based on other pre-set criteria
+
    public double getBMI()
    {
       return ( (holderWeight * 703) / (holderWeight * holderWeight) );
    }
-   
+
+// method to set the policy cost outside the class based on other pre-set criteria
+
    public double getPolicyCost()
    {
       double ageKicker;
@@ -115,7 +137,7 @@ public class Policy
       {
          BMIKicker = 0;
       }
-      
+
       return 600 + ageKicker + smokingKicker + BMIKicker;
    }
 }
