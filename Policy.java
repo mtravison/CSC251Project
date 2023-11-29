@@ -96,11 +96,67 @@ public class Policy
       holderWeight = holWeight;
    }
 
+// method to get the policy number
+
+   public double getPolNum()
+   {
+      return policyNumber;
+   }
+
+// method to get the provider name
+
+   public String getProName()
+   {
+      return providerName;
+   }
+
+// method to get the holder first name
+
+   public String getHolFirstName()
+   {
+      return holderFirstName;
+   }
+
+// method to get the holder last name
+
+   public String getHolLastName()
+   {
+      return holderLastName;
+   }
+
+// method to get the holder age
+
+   public int getHolAge()
+   {
+      return holderAge;
+   }
+
+// method to get the holder smoker status
+
+   public String getStatus()
+   {
+      return holderSmokerStatus;
+   }
+
+// method to get the holder height
+
+   public double getHolHeight()
+   {
+      return holderHeight;
+   }
+
+// method to get the holder weight
+
+   public double getHolWeight()
+   {
+      return holderWeight;
+   }
+
 // method to get the policy holder BMI outside the class based on other pre-set criteria
 
    public double getBMI()
    {
-      return ( (holderWeight * 703) / (holderWeight * holderWeight) );
+      return ( (holderWeight * 703) / (holderHeight * holderHeight) );
    }
 
 // method to set the policy cost outside the class based on other pre-set criteria
@@ -120,7 +176,7 @@ public class Policy
          ageKicker = 0;
       }
       
-      if ( holderSmokerStatus.equals("Smoker") )
+      if ( holderSmokerStatus.equals("smoker") )
       {
          smokingKicker = 100;
       }
@@ -131,7 +187,7 @@ public class Policy
 
       if ( getBMI() > 35 )
       {
-         BMIKicker = (getBMI() - 35) * 20;
+         BMIKicker = ( (getBMI() - 35) * 20 );
       }
       else
       {
